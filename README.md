@@ -1,6 +1,13 @@
 # ZXPicoJoy
 Programmable Joystick Interface for the ZX Spectrum using a Raspberry Pico
 
+## The PCB
+PCB designed to have all the components on the side away from the Spectrum to give more room. The edge connector then sits on the back side as well as the OLED so this is visible to the user. This is also why the buttons are reversed. 
+### PCB v1.6c Front
+![image](.//images/zxpiocojoy_v1.6c.png "PCB Front")
+### PCB v1.6c Back
+![image](.//images/zxpiocojoy_v1.6c_back.png "PCB Back")
+
 ### Joystick Pin-Out
 
 The joystick is wired for 3 button Kempston (Amiga) with the option to flip button 2 to pin 7 enabling the use of 2 button Amstrad joysticks. There is also an option to supply power to pin 7 for autofire circuits. It is wired to 3V3 instead of 5V so may not work on all joysticks, however, all the ones I have tried work fine as they are simple transistor circuits.
@@ -14,13 +21,6 @@ The joystick is wired for 3 button Kempston (Amiga) with the option to flip butt
 - Pin 7    Either Button 2 for Amstrad compatibility, not connected or 3V3
 - Pin 8    GND
 - Pin 9    Either Button 2 or not connected
-
-### The PCB
-PCB designed to have all the components on the side away from the Spectrum to give more room. The edge connector then sits on the back side as well as the OLED so this is visible to the user. This is also why the buttons are reversed. 
-### PCB v1.6c Front
-![image](.//images/zxpiocojoy_v1.6c.png "PCB Front")
-### PCB v1.6c Back
-![image](.//images/zxpiocojoy_v1.6c_back.png "PCB Back")
 
 ### Bill of Materials (BoM)
 - 1x [Raspberry Pico](https://shop.pimoroni.com/products/raspberry-pi-pico?variant=40059364311123). Recommend H variant as header pre-soldered.
