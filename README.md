@@ -1,6 +1,20 @@
 # ZXPicoJoy
 Programmable Joystick Interface for the ZX Spectrum using a Raspberry Pico
 
+### Joystick Pin-Out
+
+The joystick is wired for 3 button Kempston (Amiga) with the option to flip button 2 to pin 7 enabling the use of 2 button Amstrad joysticks. There is also an option to supply power to pin 7 for autofire circuits. It is wired to 3V3 instead of 5V so may not work on all joysticks, however, all the ones I have tried work fine as they are simple transistor circuits.
+
+- Pin 1    Up
+- Pin 2    Down
+- Pin 3    Left
+- Pin 4    Right
+- Pin 5    Button 3
+- Pin 6    Button 1
+- Pin 7    VCC
+- Pin 8    GND
+- Pin 9    Button 2
+
 ### The PCB
 PCB designed to have all the components on the side away from the Spectrum to give more room. The edge connector then sits on the back side as well as the OLED so this is visible to the user. This is also why the buttons are reversed. 
 ### PCB v1.6c Front
