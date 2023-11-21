@@ -1,0 +1,33 @@
+.program zxpicojoym
+    pull block // get address header, top 24bits
+    mov x osr // put osr into x
+.wrap_target
+    set pins 0b10 // dataon=OFF, addon=ON
+    //mov osr null // 0s -> OSR
+    //out pindirs 8 // set i/o pin directions to 0 (input)
+    wait 0 gpio 20 // wait for KEYRD to go low
+    mov isr x // get top 24bits from x scratch -> when combined forms a 32bit address in Pico memory
+    in pins 8 // shift in 8 bits from i/o pins to ISR, auto push enabled ISR to RX FIFO -> DMA
+    set pins 0b11 // dataon=OFF, addon=OFF        
+    //mov osr ~null // 1s -> OSR
+    //out pindirs 8 // set i/o pin directions to 1 (output)    
+    pull block // bring in data from DMA
+    mov y ~osr // copy bit invert of OSR to y (11111111 -> 00000000)
+    jmp !y _nodata // if y=0 then skip data output
+    out pins 8 // shift 8 bits from OSR to i/o pins
+    set pins 0b01 // dataon=ON, addon=OFF    
+_nodata:
+    wait 1 gpio 20 // wait for KEYRD to go high
+.wrap
+
+// You can change the pindirs (making a given pin an input or output at that moment) using OUT or SET instructions, 
+// or by side-set on any instruction. This is awkward if you are using lots of pins, because SET and side-set are 
+// limited to 5 bits; OUT can do as many as you like byt typically takes several instructions to do it. By using 
+// different mappings for SET and side-set, you can do up to 10 pins in a single instruction.
+
+// notes this worked without the mov osr null out pindirs 8 instructions
+// beleive this is because the buffer overrides the Pico output
+// have also tried the mov osr null to set input and removed the output one and it definately changes the direction
+// as this stopped it working
+// in summary it works if you set the pins to Output, the buffer overwrites the output. Input is basically always on
+// the out pindirs also works byt doesn't seem to be necessary in this instance

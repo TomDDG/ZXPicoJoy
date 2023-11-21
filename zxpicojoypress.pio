@@ -1,0 +1,8 @@
+.program zxpicojoypress
+.wrap_target
+    wait 0 gpio 16 // only do this when ADDON is on
+    in pins 7 // shift in 7 bits from gpio pins to ISR, auto push enabled ISR to RX FIFO  
+.wrap
+
+// just loops feeding the DMA with the joystick pins
+// only does this if the address buffer is on to help prevent interference with data out

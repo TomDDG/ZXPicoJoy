@@ -1,0 +1,10 @@
+.program zxpicojoym_k
+.wrap_target
+    set pins 0b10 // dataon=OFF, addon=ON
+    wait 0 gpio 19 // wait for KEMP to go low
+    set pins 0b11 // dataon=OFF, addon=OFF             
+    pull block
+    out pins 8 // shift 8 bits from OSR to gpio pins
+    set pins 0b01 // dataon=ON, addon=OFF       
+    wait 1 gpio 19 // wait for KEMP to go high
+.wrap
