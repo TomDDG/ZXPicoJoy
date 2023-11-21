@@ -11,9 +11,9 @@ The joystick is wired for 3 button Kempston (Amiga) with the option to flip butt
 - Pin 4    Right
 - Pin 5    Button 3
 - Pin 6    Button 1
-- Pin 7    VCC
+- Pin 7    Either Button 2 for Amstrad compatibility, not connected or 3V3
 - Pin 8    GND
-- Pin 9    Button 2
+- Pin 9    Either Button 2 or not connected
 
 ### The PCB
 PCB designed to have all the components on the side away from the Spectrum to give more room. The edge connector then sits on the back side as well as the OLED so this is visible to the user. This is also why the buttons are reversed. 
