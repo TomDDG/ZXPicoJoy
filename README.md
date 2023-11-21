@@ -1,5 +1,13 @@
 # ZXPicoJoy
-Programmable Joystick Interface for the ZX Spectrum using a Raspberry Pico
+Programmable Joystick Interface for the ZX Spectrum using a Raspberry Pico.
+
+Supports:
+- Kempston
+- Sinclair 1 & 2
+- Cursor
+- Any key combination
+
+Uses an OLED and buttons to program and does not interfere with the Spectrum unless it is supposed to.
 
 ## The PCB
 PCB designed to have all the components on the side away from the Spectrum to give more room. The edge connector then sits on the back side as well as the OLED so this is visible to the user. This is also why the buttons are reversed. 
