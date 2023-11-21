@@ -12,15 +12,15 @@ PCB designed to have all the components on the side away from the Spectrum to gi
 
 The joystick is wired for 3 button Kempston (Amiga) with the option to flip button 2 to pin 7 enabling the use of 2 button Amstrad joysticks. There is also an option to supply power to pin 7 for autofire circuits. It is wired to 3V3 instead of 5V so may not work on all joysticks, however, all the ones I have tried work fine as they are simple transistor circuits.
 
-- Pin 1    Up
-- Pin 2    Down
-- Pin 3    Left
-- Pin 4    Right
-- Pin 5    Button 3
-- Pin 6    Button 1
-- Pin 7    Either Button 2 for Amstrad compatibility, not connected or 3V3
-- Pin 8    GND
-- Pin 9    Either Button 2 or not connected
+- Pin 1: Up
+- Pin 2: Down
+- Pin 3: Left
+- Pin 4: Right
+- Pin 5: Button 3
+- Pin 6: Button 1
+- Pin 7: Button 2 for Amstrad compatibility, not connected or 3V3
+- Pin 8: GND
+- Pin 9: Button 2 or not connected
 
 ### Bill of Materials (BoM)
 - 1x [Raspberry Pico](https://shop.pimoroni.com/products/raspberry-pi-pico?variant=40059364311123). Recommend H variant as header pre-soldered.
