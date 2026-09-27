@@ -46,3 +46,13 @@ The joystick is wired for 3 button Kempston (Amiga) with the option to flip butt
 - 1x 4pin PCB header socket 2.54mm Pitch
 - 1x SSD1306 OLED 0.96" (you can get larger ones just make sure they are SSD1306). Be very careful of the GND & VCC placement as they are sometimes reversed.
 - 1x 2x2pin PCB pin header + jumpers
+
+### Photos
+![image](.//images/IMG_4917.JPEG "Unit Front")
+![image](.//images/IMG_4918.JPEG "Unit Back")
+![image](.//images/IMG_4920.JPEG "Plugged In")
+![image](.//images/IMG_4922.JPEG "Option 1")
+![image](.//images/IMG_4923.JPEG "Option 3")
+![image](.//images/IMG_4927.JPEG "Option 4")
+![image](.//images/IMG_4928.JPEG "Option 5")
+![image](.//images/IMG_4929.JPEG "Option 7")
