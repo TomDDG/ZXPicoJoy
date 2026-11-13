@@ -1,13 +1,36 @@
 # ZXPicoJoy
 Programmable Joystick Interface for the ZX Spectrum using a Raspberry Pico.
 
-Supports:
-- Kempston
+Currently Supports:
+- Kempston (on Port 0x1F)
 - Sinclair 1 & 2
 - Cursor
-- Any key combination
+- Any Keyboard Key Combination
+- Mixture of Kempston & Key Combinations
 
 Uses an OLED and buttons to program and does not interfere with the Spectrum unless it is supposed to.
+
+## UI Menu Layout
+
+Upon entering the menu you are shown the 9 pin Wired Joystick Image. Pressing enter (either on the interface or fire on the joystick) moves the menu to the set-up sub-menus for this joystick type.
+- Pressing Left (either on the interface or with the joystick) shows the Information Screen showing the current button mappings and which config/joystick type is active.
+- Pressing Right goes the the Bluetooth controller menu which has not been implemented yet so doesn't do anything
+  - Pressing Right again goes to the Bluetooth Connection Menu which again has not been implemented yet so doesn't do anything
+
+The sub-menus are as follows:
+- Activate Joystick Type (this is always on for the 9pin wired Joystick as Bluetooth not implemented yet)
+- Config Selection - There are 8 independent configurations so you can store the different mappings once you've set them up. To start with config 1 is selected and all configs are defaulted to Sinclair 1 (67890).
+  - In the config menu there is an option to save the current set-up in the currently active config number. This is important as changing teh layout doesn't automatically save to flash. Save is only needed if you want to retain the set-up after a power down.
+  - Other two options are Save To, which allows you to save the current set-up to a new Config number & Delete/Reset Config which jsut resets the config to default (Sinclair 1). Both these write to flash automatically.
+- Redefine Button Mappings - This sub-menu allows you to select what each button (and direct) do. This can be either a key or kemston and each button can be mapped to anything. This means you can have a combination of keys and kempston if you wish.
+- Preset (Kempston, Sinclair 1 & 2, Protek/Cursor) - This simply maps all the buttons and directions to the standard layout so for Sinclair 1 this will be 6=Left, 7=Right, 8=Down, 9=Up and Button 1=0. For Kempston this is a one to one mapping.
+
+For the 9pin wired joystick you can map up to 3 buttons and 4 directions. 
+
+![image](.//images/screenlayoutxcf.png "Menu Layout")
+
+## The Circuit
+![image](.//images/schematic.png "Schematic")
 
 ## The PCB
 PCB designed to have all the components on the side away from the Spectrum to give more room. The edge connector then sits on the back side as well as the OLED so this is visible to the user. This is also why the buttons are reversed. 
