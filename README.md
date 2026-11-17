@@ -17,7 +17,7 @@ Upon entering the menu, you will see the 9-pin Wired Joystick image.
 - If you hold the menu button instead of single press you will enter the preset menu which allows you to quickly select a common joystick types, including Kempston, Sinclair 1 & 2, Protek/Cursor, and Keyboard QAOPM.
 
 ### Sub-Menu Options
-1.Config Selection - Access up to 8 independent configurations to store different mapping profiles (by default, the system starts on Config 1 with the Sinclair 1 (67890) profile). Other options are:
+1. Config Selection - Access up to 8 independent configurations to store different mapping profiles (by default, the system starts on Config 1 with the Sinclair 1 (67890) profile). Other options are:
   - Save: Save the current setup to the active configuration number.
   - Save To: Save the current setup to a specific configuration number.
   - Delete/Reset Config: Revert the current configuration to its default (Sinclair 1).
