@@ -10,23 +10,34 @@ Currently Supports:
 
 Uses an OLED and buttons to program and does not interfere with the Spectrum unless it is supposed to.
 
-## UI Menu Layout
+## UI Menu Layout: 9-Pin Wired Joystick
 
-Upon entering the menu you are shown the 9 pin Wired Joystick Image. Pressing enter (either on the interface or fire on the joystick) moves the menu to the set-up sub-menus for this joystick type.
-- Pressing Left (either on the interface or with the joystick) shows the Information Screen showing the current button mappings and which config/joystick type is active.
+### Initial Setup
+Upon entering the menu, you will see the 9-pin Wired Joystick image. Press Enter (via the interface or the joystick) to enter the configuration sub-menus.
 
-The sub-menus are as follows:
-- Config Selection - There are 8 independent configurations so you can store the different mappings once you've set them up. To start with config 1 is selected and all configs are defaulted to Sinclair 1 (67890).
-  - In the config menu there is an option to save the current set-up in the currently active config number.
-  - Other options are Save To, which allows you to save the current set-up to a new Config number; Delete/Reset Config which jsut resets the config to default (Sinclair 1) & Select a Preset (Kempston, Sinclair, Protek/Cursor or QAOPM)
-- Redefine Button Mappings - This sub-menu allows you to select what each button (and direct) do. This can be either a key or kemston and each button can be mapped to anything. This means you can have a combination of keys and kempston if you wish.
+### Navigation & Information
+Information Screen: Press Left (interface or joystick) to view the current button mappings and identify the active configuration/joystick type.
+Preset Menu: Hold the Menu Button (or access via the Config menu) to quickly select common joystick types, including Kempston, Sinclair 1 & 2, Protek/Cursor, and Keyboard QAOPM.
 
+###Sub-Menu Options
+1.Config Selection
+- Configurations: Access up to 8 independent configurations to store different mapping profiles.
+- Defaults: By default, the system starts on Config 1 with the Sinclair 1 (67890) profile.
+- Management:
+  - Save: Save the current setup to the active configuration number.
+  - Save To: Save the current setup to a specific configuration number.
+  - Delete/Reset Config: Revert the current configuration to its default (Sinclair 1).
+  - Select a Preset: Quickly apply standard profiles (Kempston, Sinclair, Protek/Cursor, or QAOPM).
+2. Redefine Button Mappings
+- Customization: Define the actions for each button and direction.
+- Flexibility: You can map inputs to either Key or Kempston commands, allowing you to mix and match types for each individual button.
 
-Holding the menu button instead of single press will enter a preset menu (can also be accessed via the config menu). This allows quick select of the most common joystick types - Kempston, Sinclair 1 & 2, Protek/Cursor & Keyboard QAOPM.
-
-For the 9pin wired joystick you can map up to 3 buttons and 4 directions. 
+### Hardware Limits
+The 9-pin wired joystick supports up to 3 buttons and 4 directions.
 
 ![image](.//images/screenlayout.png "Menu Layout")
+![image](.//images/configmenu.png "Config Menu")
+
 
 ## The Circuit
 ![image](.//images/schematic.png "Schematic")
