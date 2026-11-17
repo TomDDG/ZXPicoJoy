@@ -11,33 +11,24 @@ Currently Supports:
 Uses an OLED and buttons to program and does not interfere with the Spectrum unless it is supposed to.
 
 ## UI Menu Layout: 9-Pin Wired Joystick
-
-### Initial Setup
-Upon entering the menu, you will see the 9-pin Wired Joystick image. Press Enter (via the interface or the joystick) to enter the configuration sub-menus.
-
-### Navigation & Information
-Information Screen: Press Left (interface or joystick) to view the current button mappings and identify the active configuration/joystick type.
-Preset Menu: Hold the Menu Button (or access via the Config menu) to quickly select common joystick types, including Kempston, Sinclair 1 & 2, Protek/Cursor, and Keyboard QAOPM.
+Upon entering the menu, you will see the 9-pin Wired Joystick image. 
+- Press Enter (via the interface or the joystick) to enter the configuration sub-menus.
+- Press Left (interface or joystick) to view the current button mappings and identify the active configuration/joystick type.
+- If you hold the menu button instead of single press you will enter the preset menu which allows you to quickly select a common joystick types, including Kempston, Sinclair 1 & 2, Protek/Cursor, and Keyboard QAOPM.
 
 ###Sub-Menu Options
-1.Config Selection
-- Configurations: Access up to 8 independent configurations to store different mapping profiles.
-- Defaults: By default, the system starts on Config 1 with the Sinclair 1 (67890) profile.
-- Management:
+1.Config Selection - Access up to 8 independent configurations to store different mapping profiles (by default, the system starts on Config 1 with the Sinclair 1 (67890) profile). Other options are:
   - Save: Save the current setup to the active configuration number.
   - Save To: Save the current setup to a specific configuration number.
   - Delete/Reset Config: Revert the current configuration to its default (Sinclair 1).
   - Select a Preset: Quickly apply standard profiles (Kempston, Sinclair, Protek/Cursor, or QAOPM).
-2. Redefine Button Mappings
-- Customization: Define the actions for each button and direction.
-- Flexibility: You can map inputs to either Key or Kempston commands, allowing you to mix and match types for each individual button.
+2. Redefine Button Mappings - Define the mapping for each button and direction. You can map inputs to either Key or Kempston commands, allowing you to mix and match types for each individual button.
 
 ### Hardware Limits
 The 9-pin wired joystick supports up to 3 buttons and 4 directions.
 
 ![image](.//images/screenlayout.png "Menu Layout")
 ![image](.//images/configmenu.png "Config Menu")
-
 
 ## The Circuit
 ![image](.//images/schematic.png "Schematic")
