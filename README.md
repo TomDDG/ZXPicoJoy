@@ -27,7 +27,10 @@ Upon entering the menu, you will see the 9-pin Wired Joystick image.
 ### Hardware Limits
 The 9-pin wired joystick supports up to 3 buttons and 4 directions.
 
+### Full Menu Layout
 ![image](.//images/screenlayout.png "Menu Layout")
+
+### Config Menu Layout
 ![image](.//images/configmenu.png "Config Menu")
 
 ## The Circuit
