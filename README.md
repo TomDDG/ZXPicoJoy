@@ -39,17 +39,17 @@ The 9-pin wired joystick port supports up to 3 buttons and 4 directions (based o
 
 **Note you cannot use Megadrive/Genesis Pads with this interface as the wiring is different (see table below)**
 
-| Pin | Kempston (Extended) | Atari/C64 | Amstrad CPC | Amiga | Atar ST | Megadrive |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | Up | Up | Up | Up | Up | Up |
-| 2 | Down | Down | Down | Down | Down |
-| 3 | Left | Left | Left | Left | Left | Left |
-| 4 | Right | Right | Right | Right | Right | Right |
-| 5 | Button 3 | Analogue 1 | Button 3| NC | Paddle B | 5V |
-| 6 | Button 1 | Button 1 | Button 2 | Button 1 | Trigger | Button C |
-| 7 | 5V | 5V | Button 1 | 5V | 5V | GND |
-| 8 | GND | GND | COM | GND | GND | Select |
-| 9 | Button 2 | Analogue 2 | COM2 | Button 2 | Paddle A | Button B |
+| Pin | Sinclair IF2 | Kempston (Extended) | Atari/C64 | Amstrad CPC | Amiga | Atar ST | Megadrive | 
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Up | Up | Up | Up | Up | Up | Up |
+| 2 | Down | Down | Down | Down | Down | Down |
+| 3 | Left | Left | Left | Left | Left | Left | Left |
+| 4 | Right | Right | Right | Right | Right | Right | Right |
+| 5 | NC | Button 3 | Analogue 1 | Button 3| NC | Paddle B | 5V |
+| 6 | Button 1 | Button 1 | Button 1 | Button 2 | Button 1 | Trigger | Button C |
+| 7 | NC | 5V | 5V | Button 1 | 5V | 5V | GND |
+| 8 | GND | GND | GND | COM | GND | GND | Select |
+| 9 | NC | Button 2 | Analogue 2 | COM2 | Button 2 | Paddle A | Button B |
 
 ### Full Menu Layout
 ![image](.//images/screenlayout.png "Menu Layout")
