@@ -20,6 +20,10 @@ v1.0 - First release out of beta. Lots of improvements and bug fixes since v0.2 
   - Fixed kempston PIO code so it now doesn't double jump in some games
   - Fixed keyboard PIO so it now handles multiple key row reads at once (JSW & Manic Miner)
 
+I've uploaded two version of the UF2 firmware. One for the Pico & one for the Pico W
+- Pico Version (https://github.com/TomDDG/ZXPicoJoy/blob/main/zxpicojoym_v1.0_MinSizeRel.uf2)
+- Pico W Version (https://github.com/TomDDG/ZXPicoJoy/blob/main/zxpicojoym_v1.0_MinSizeRel_W.uf2)
+
 ## UI Menu Layout: 9-Pin Wired Joystick
 Upon entering the menu, you will see the 9-pin Wired Joystick image. 
 - Press Enter (via the interface or the joystick) to enter the configuration sub-menus.
