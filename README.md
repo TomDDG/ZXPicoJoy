@@ -34,8 +34,22 @@ Upon entering the menu, you will see the 9-pin Wired Joystick image.
   - Select a Preset: Quickly apply standard profiles (Kempston, Sinclair, Protek/Cursor, or QAOPM).
 2. Redefine Button Mappings - Define the mapping for each button and direction. You can map inputs to either Key or Kempston commands, allowing you to mix and match types for each individual button.
 
-### Hardware Limits
-The 9-pin wired joystick supports up to 3 buttons and 4 directions.
+### Hardware Set-up
+The 9-pin wired joystick supports up to 3 buttons and 4 directions, this is based on the Kempston extended interface. 3 button joysticks are less common but 2 button are more avialble. The PCB also has jumpers to allow Pin 7 and Pin 9 of the Joystick to be changed to accomodate Amstrad 2 button joysticks. Default configuration is Pin 7 to 3V3 and Pin 9 to button 2. 
+
+**Note you cannot use Megadrive/Genesis Pads with this interface as the wiring is different (see table below)**
+
+| Pin | Kempston (Extended) | Atari/C64 | Amstrad CPC | Amiga | Atar ST | Megadrive |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Up | Up | Up | Up | Up | Up |
+| 2 | Down | Down | Down | Down | Down |
+| 3 | Left | Left | Left | Left | Left | Left |
+| 4 | Right | Right | Right | Right | Right | Right |
+| 5 | Button 3 | Analogue 1 | Button 3| NC | Paddle B | 5V |
+| 6 | Button 1 | Button 1 | Button 2 | Button 1 | Trigger | Button C |
+| 7 | 5V | 5V | Button 1 | 5V | 5V | GND |
+| 8 | GND | GND | COM | GND | GND | Select |
+| 9 | Button 2 | Analogue 2 | COM2 | Button 2 | Paddle A | Button B |
 
 ### Full Menu Layout
 ![image](.//images/screenlayout.png "Menu Layout")
