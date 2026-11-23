@@ -35,7 +35,9 @@ Upon entering the menu, you will see the 9-pin Wired Joystick image.
 2. Redefine Button Mappings - Define the mapping for each button and direction. You can map inputs to either Key or Kempston commands, allowing you to mix and match types for each individual button.
 
 ### Joystick Set-up
-The 9-pin wired joystick port supports up to 3 buttons and 4 directions (based on the Kempston extended interface & Amiga standard). 3 button joysticks are not very common but 2 button ones are more avialble. Default set-up is for 3 button Kempston (Amiga) with the option to flip button 2 to pin 7 enabling the use of 2 button Amstrad joysticks using the jumpers on the PCB. There is also an option to supply power to pin 7 for autofire circuits. It is wired to 3V3 instead of 5V so may not work on all joysticks, however, all the ones I have tried work fine as they are simple transistor circuits.
+The 9-pin wired joystick port supports up to 3 buttons and 4 directions (based on the Kempston extended interface & Amiga standard). 1 button joysticks are most common for the era and most games only work with a single fire button. 3 button joysticks are rare, I don't even have one to test, but 2 button ones are more available and the more modern gamepads are usually 2 button. This is useful as you can set these up to have button 1 as per the original and then button 2 can be any other key.
+
+Default set-up is for 3 button Kempston (Amiga) with the option to flip button 2 to pin 7 enabling the use of 2 button Amstrad joysticks using the jumpers on the PCB. There is also an option to supply power to pin 7 for autofire circuits. It is wired to 3V3 instead of 5V so may not work on all joysticks, however, all the ones I have tried work fine as they are simple transistor circuits.
 
 **Note you cannot use Megadrive/Genesis Pads with this interface as the wiring is different (see table below)**
 
