@@ -55,6 +55,27 @@ Default set-up is for 3 button Kempston (Amiga) with the option to flip button 2
 
 ### The Code
 
+The code uses the PIO fed by DMAs to convert joystick button press into the correct databus output for either Kempston or Keyboard. The hardware design allows the combination of the top 8bits of the address bus and the 7 joystick bits to be used as a lookup of an array (for Kempston it just uses the 7 joystick bits and ignores the address bus).
+
+Example PIO code for keyboard
+````
+.program zxpicojoym
+.side_set 2 opt // side set is used to switch on the buffer chips (one for data, one for address).
+    pull block // get address header, top 17bits (add to 15bits from IN to make it a 32bits address location in PICO memory)
+    mov x osr // put osr into x
+.wrap_target
+    mov isr x side 0b10 // get top 17bits from x -> when combined forms a 32bit address in Pico memory
+    wait 0 gpio 20  // wait for KEYRD to go low
+    in pins 15 // shift in 15 bits from i/o pins to ISR, auto push enabled ISR to RX FIFO -> DMA
+    pull block // bring in data from DMA      
+    mov y osr // copy OSR to y
+    jmp !y _nodata // if y=0 then skip data output (this stops it interfering with the normal keyboard)
+    out pins 8 side 0b01 // shift 8 bits from OSR to i/o pins
+_nodata:
+    wait 1 gpio 20 // wait for KEYRD to go high
+.wrap // loop
+````
+
 #### Jet Set WIlly & Manic Miner
 
 The original code was set-up to mirror the ROM keyread scanning routine, so for each half row scan address (5 keys in each half row) it presents the correct byte to the data bus. This worked fine apart from Jet Set Willy & Manic Miner. Reviewing the Jet Set Willy disassembly it turns out the code actually scans multiple half rows at once, basically as they key mappings are the same across multiple rows (key 5 goes left, so does key 6 which is the same byte but different half rows). Simply adapting the output so it works with combined half row addresses fixed this issue.
@@ -70,7 +91,7 @@ The original code was set-up to mirror the ROM keyread scanning routine, so for 
 | A14 Low | ENTER, L, K, J, H |
 | A15 Low | SPACE, SYMBOL SHIFT, M, N, B |
 
-Normal operation only one address bit goes low at once. For Jet Set Willy A11 & A12 are both low on the same read so 1=0 2=9 3=8 4=7 & 5=6.
+Normal operation only one address bit goes low for each key read. For Jet Set Willy A11 & A12 are both low on the same read so 1=0 2=9 3=8 4=7 & 5=6.
 
 ### Full Menu Layout
 ![image](.//images/screenlayout.png "Menu Layout")
