@@ -34,8 +34,8 @@ Upon entering the menu, you will see the 9-pin Wired Joystick image.
   - Select a Preset: Quickly apply standard profiles (Kempston, Sinclair, Protek/Cursor, or QAOPM).
 2. Redefine Button Mappings - Define the mapping for each button and direction. You can map inputs to either Key or Kempston commands, allowing you to mix and match types for each individual button.
 
-### Hardware Set-up
-The 9-pin wired joystick supports up to 3 buttons and 4 directions, this is based on the Kempston extended interface. 3 button joysticks are less common but 2 button are more avialble. The PCB also has jumpers to allow Pin 7 and Pin 9 of the Joystick to be changed to accomodate Amstrad 2 button joysticks. Default configuration is Pin 7 to 3V3 and Pin 9 to button 2. 
+### Joystick Set-up
+The 9-pin wired joystick port supports up to 3 buttons and 4 directions (based on the Kempston extended interface & Amiga standard). 3 button joysticks are not very common but 2 button ones are more avialble. Default set-up is for 3 button Kempston (Amiga) with the option to flip button 2 to pin 7 enabling the use of 2 button Amstrad joysticks using the jumpers on the PCB. There is also an option to supply power to pin 7 for autofire circuits. It is wired to 3V3 instead of 5V so may not work on all joysticks, however, all the ones I have tried work fine as they are simple transistor circuits.
 
 **Note you cannot use Megadrive/Genesis Pads with this interface as the wiring is different (see table below)**
 
@@ -67,20 +67,6 @@ PCB designed to have all the components on the side away from the Spectrum to gi
 ### PCB v1.6c Back
 ![image](.//images/zxpiocojoy_v1.6c_back.png "PCB Back")
 
-### Joystick Pin-Out
-
-The joystick is wired for 3 button Kempston (Amiga) with the option to flip button 2 to pin 7 enabling the use of 2 button Amstrad joysticks. There is also an option to supply power to pin 7 for autofire circuits. It is wired to 3V3 instead of 5V so may not work on all joysticks, however, all the ones I have tried work fine as they are simple transistor circuits.
-
-- Pin 1: Up
-- Pin 2: Down
-- Pin 3: Left
-- Pin 4: Right
-- Pin 5: Button 3
-- Pin 6: Button 1
-- Pin 7: Button 2 for Amstrad compatibility, not connected or 3V3
-- Pin 8: GND
-- Pin 9: Button 2 or not connected
-
 ### Bill of Materials (BoM)
 - 1x [Raspberry Pico](https://shop.pimoroni.com/products/raspberry-pi-pico?variant=40059364311123). Recommend H variant as header pre-soldered.
 - 2x [SN74LVC245AN Octal Bus Transceiver With 3-State Outputs](https://www.mouser.co.uk/ProductDetail/595-SN74LVC245AN). Note these need to be the LVC variant to work with the 3v3 of the Pico.
@@ -96,7 +82,7 @@ The joystick is wired for 3 button Kempston (Amiga) with the option to flip butt
 - 1x [DE9 9pin Male PCB Connector](https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=db9+9pin+pcb+male+connector&_sacat=0&LH_TitleDesc=0&_osacat=0&_odkw=db9+9pin+pcb+male+connector)
 - 1x 4pin PCB header socket 2.54mm Pitch
 - 1x SSD1306 OLED 0.96" (you can get larger ones just make sure they are SSD1306). Be very careful of the GND & VCC placement as they are sometimes reversed.
-- 1x 2x2pin PCB pin header + jumpers
+- 1x 2x2pin PCB pin header + jumpers (default set-up is Pin 7 to 3V3 & Pin 9 to Button 2)
 
 ### Photos
 ![image](.//images/IMG_4917.JPEG "Unit Front")
