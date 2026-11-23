@@ -53,6 +53,25 @@ Default set-up is for 3 button Kempston (Amiga) with the option to flip button 2
 | 8 | GND | GND | GND | COM | GND | GND | Select |
 | 9 | NC | Button 2 | Analogue 2 | COM2 | Button 2 | Paddle A | Button B |
 
+### The Code
+
+#### Jet Set WIlly & Manic Miner
+
+The original code was set-up to mirror the ROM keyread scanning routine, so for each half row scan address (5 keys in each half row) it presents the correct byte to the data bus. This worked fine apart from Jet Set Willy & Manic Miner. Reviewing the Jet Set Willy disassembly it turns out the code actually scans multiple half rows at once, basically as they key mappings are the same across multiple rows (key 5 goes left, so does key 6 which is the same byte but different half rows). Simply adapting the output so it works with combined half row addresses fixed this issue.
+
+| Adress | Keys |
+| --- | --- |
+| A8 Low | CAPS SHIFT, Z, X, C, V |
+| A9 Low | A, S, D, F, G |
+| A10 Low | Q, W, E, R, T |
+| A11 Low | 1, 2, 3, 4, 5 |
+| A12 Low | 0, 9, 8, 7, 6 |
+| A13 Low | P, O, I, U, Y |
+| A14 Low | ENTER, L, K, J, H |
+| A15 Low | SPACE, SYMBOL SHIFT, M, N, B |
+
+Normal operation only one address bit goes low at once. For Jet Set Willy A11 & A12 are both low on the same read so 1=0 2=9 3=8 4=7 & 5=6.
+
 ### Full Menu Layout
 ![image](.//images/screenlayout.png "Menu Layout")
 
