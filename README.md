@@ -15,7 +15,7 @@ v1.0 - First release out of beta. Lots of improvements and bug fixes since v0.2 
   - New menu layout making it easier to navigate and select presets
   - Added 8 configs which allows the user to create their own mappings. Configs are saved to flash so retained even after poweroff.
   - Added separate preset menu which can be accessed by holding the menu button down. This allows quick select of the mosts common joystick types.
-  - Removed bluetooth screens till read, will split the build
+  - Removed bluetooth screens till ready, will split the build once this is added
   - Add info screen to show the current mappings.
   - Fixed kempston PIO code so it now doesn't double jump in some games
   - Fixed keyboard PIO so it now handles multiple key row reads at once (JSW & Manic Miner)
