@@ -130,6 +130,8 @@ PCB designed to have all the components on the side away from the Spectrum to gi
 - 1x SSD1306 OLED 0.96" (you can get larger ones just make sure they are SSD1306). Be very careful of the GND & VCC placement as they are sometimes reversed.
 - 1x 2x2pin PCB pin header + jumpers (default set-up is Pin 7 to 3V3 & Pin 9 to Button 2)
 
+I've also added a BoM.xlsx to the Gerber folder.
+
 ### Photos
 ![image](.//images/IMG_4917.JPEG "Unit Front")
 ![image](.//images/IMG_4918.JPEG "Unit Back")
